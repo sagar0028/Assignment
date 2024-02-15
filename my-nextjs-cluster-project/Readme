@@ -1,0 +1,8 @@
+So, in summary, you're seeing "Server running on http://localhost:8000" 
+printed four times because you have four worker processes,
+ each handling requests independently.
+  And you're seeing "Worker <process.pid> started" with different process IDs 
+  because each worker process is a separate instance with its own unique process ID.
+  --------------------
+
+  
