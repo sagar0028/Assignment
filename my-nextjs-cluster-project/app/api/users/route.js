@@ -6,7 +6,7 @@ async function getAllUsers(req) {
     try {
        
         const user = await Users.find();
-        if (user?.length < 0 || !user) {
+        if (!user?.length > 0) {
             return {code: 404, message: "Data Not Found"}
         }
         return {code: 200, message: "Success", payload: user}
